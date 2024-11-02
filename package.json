@@ -11,7 +11,8 @@
     "check": "astro check",
     "lint": "prettier --check . && eslint .",
     "astro": "astro",
-    "preinstall": "npx only-allow pnpm"
+    "preinstall": "npx only-allow pnpm",
+    "prepare": "husky"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
