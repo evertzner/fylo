@@ -1,1 +1,74 @@
-<footer></footer>
+---
+const contactItems = [
+  {
+    icon: '/icon-location.svg',
+    alt: 'Icon Location',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+  },
+  {
+    icon: '/icon-phone.svg',
+    alt: 'Icon Phone',
+    description: '+1-543-123-4567'
+  },
+  {
+    icon: '/icon-email.svg',
+    alt: 'Icon Email',
+    description: 'example@fylo.com'
+  }
+];
+
+const links = [
+  ['About Us', 'Jobs', 'Press', 'Blog'],
+  ['Contact Us', 'Terms', 'Privacy']
+];
+
+const socials = [
+  {
+    icon: '/facebook.svg',
+    alt: 'Icon Facebook'
+  },
+  {
+    icon: '/twitter.svg',
+    alt: 'Icon Twitter'
+  },
+  {
+    icon: '/instagram.svg',
+    alt: 'Icon Instagram'
+  }
+];
+---
+
+<footer>
+  <img src='/logo.svg' alt='Logo footer' loading='lazy' />
+  <div>
+    {
+      contactItems.map((item) => (
+        <div>
+          <img src={item.icon} alt={`Icon ${item.alt}`} />
+          <div>{item.description}</div>
+        </div>
+      ))
+    }
+  </div>
+  <div>
+    {
+      links.map((linkGroup) => (
+        <div>
+          {linkGroup.map((link) => (
+            <a href='#'>{link}</a>
+          ))}
+        </div>
+      ))
+    }
+  </div>
+  <div>
+    {
+      socials.map((social) => (
+        <div>
+          <img src={social.icon} alt={social.alt} />
+        </div>
+      ))
+    }
+  </div>
+</footer>

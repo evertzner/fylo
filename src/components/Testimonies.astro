@@ -1,0 +1,48 @@
+---
+import { addIssueToContext } from 'astro:schema';
+
+const items = [
+  {
+    name: 'Satish Patel',
+    quote:
+      'Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.',
+    title: 'Founder & CEO, Huddle',
+    avatar: '/profile-1.jpg',
+    alt: 'Avatar Satish Patel'
+  },
+  {
+    name: 'Bruce McKenzie',
+    quote:
+      'Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.',
+    title: 'Founder & CEO, Huddle',
+    avatar: '/profile-2.jpg',
+    alt: 'Avatar Bruce McKenzie'
+  },
+  {
+    name: 'Iva Boyd',
+    quote:
+      'Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.',
+    title: 'Founder & CEO, Huddle',
+    avatar: '/profile-3.jpg',
+    alt: 'Avatar Iva Boyd'
+  }
+];
+---
+
+<div id='team'>
+  <img src='/bg-quotes.png' alt='Quotes' loading='lazy' />
+  <div>
+    {
+      items.map((item) => (
+        <div>
+          <img src={item.avatar} alt={item.alt} loading='lazy' />
+          <div>
+            <p>{item.quote}</p>
+            <h3>{item.name}</h3>
+            <p>{item.title}</p>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</div>
