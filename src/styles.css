@@ -4,6 +4,22 @@
 
 @layer base {
   body {
-    @apply text-white;
+    @apply font-open text-white;
   }
+
+  h1 {
+    @apply text-center font-raleway text-2xl font-bold leading-9;
+  }
+
+  h2 {
+    @apply font-raleway text-lg font-bold leading-6;
+  }
+
+  h3 {
+    @apply text-[10px] font-bold leading-3 tracking-[0.5px];
+  }
+}
+
+.linear-primary {
+  background: linear-gradient(135deg, #63e1d9 -42.11%, #34a0cd 100%);
 }

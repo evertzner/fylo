@@ -39,22 +39,22 @@ const socials = [
 ];
 ---
 
-<footer>
-  <img src='/logo.svg' alt='Logo footer' loading='lazy' />
-  <div>
+<footer class='flex flex-col items-start gap-7 px-7 py-4'>
+  <img src='/logo.svg' alt='Logo footer' loading='lazy' class='w-[108px]' />
+  <div class='grid grid-cols-[max-content_1fr] items-start gap-4 self-stretch py-2'>
     {
       contactItems.map((item) => (
-        <div>
-          <img src={item.icon} alt={`Icon ${item.alt}`} />
-          <div>{item.description}</div>
+        <div class='contents'>
+          <img src={item.icon} alt={`Icon ${item.alt}`} loading='lazy' />
+          <div class='leading-normal'>{item.description}</div>
         </div>
       ))
     }
   </div>
-  <div>
+  <div class='flex flex-col items-start gap-12 self-stretch py-6'>
     {
       links.map((linkGroup) => (
-        <div>
+        <div class='flex flex-col items-start gap-4 self-stretch'>
           {linkGroup.map((link) => (
             <a href='#'>{link}</a>
           ))}
@@ -62,11 +62,11 @@ const socials = [
       ))
     }
   </div>
-  <div>
+  <div class='flex items-center justify-center gap-3 self-stretch py-1'>
     {
       socials.map((social) => (
-        <div>
-          <img src={social.icon} alt={social.alt} />
+        <div class='h-7 w-7 rounded-full border border-white p-1'>
+          <img src={social.icon} alt={social.alt} loading='lazy' />
         </div>
       ))
     }

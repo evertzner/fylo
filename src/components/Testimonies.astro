@@ -29,17 +29,19 @@ const items = [
 ];
 ---
 
-<div id='team'>
-  <img src='/bg-quotes.png' alt='Quotes' loading='lazy' />
-  <div>
+<div id='team' class='flex flex-col items-start justify-center self-stretch px-12 py-[98px]'>
+  <img src='/bg-quotes.png' alt='Quotes' loading='lazy' class='ml-2 w-[22px]' />
+  <div class='flex flex-col items-start gap-6 self-stretch'>
     {
       items.map((item) => (
-        <div>
-          <img src={item.avatar} alt={item.alt} loading='lazy' />
-          <div>
-            <p>{item.quote}</p>
-            <h3>{item.name}</h3>
-            <p>{item.title}</p>
+        <div class='flex flex-col items-start gap-4 self-stretch rounded-[4px] bg-mirage-700 px-5 pb-5 pt-6'>
+          <p class='text-[10px] leading-[18px]'>{item.quote}</p>
+          <div class='flex items-start gap-2 self-stretch'>
+            <img src={item.avatar} alt={item.alt} loading='lazy' class='w-6 rounded-full' />
+            <div class='flex flex-1 flex-col items-start gap-1'>
+              <h3>{item.name}</h3>
+              <p class='text-[7px] leading-[10px] tracking-[0.5px]'>{item.title}</p>
+            </div>
           </div>
         </div>
       ))
