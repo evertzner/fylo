@@ -8,11 +8,11 @@
   }
 
   h1 {
-    @apply text-center font-raleway text-2xl font-bold leading-9;
+    @apply text-center font-raleway text-2xl font-bold leading-9 2xl:text-[40px] 2xl:leading-normal;
   }
 
   h2 {
-    @apply font-raleway text-lg font-bold leading-6;
+    @apply font-raleway text-lg font-bold leading-6 2xl:text-xl 2xl:leading-[normal];
   }
 
   h3 {
@@ -22,4 +22,8 @@
 
 .linear-primary {
   background: linear-gradient(135deg, #63e1d9 -42.11%, #34a0cd 100%);
+}
+
+.linear-primary:hover {
+  background: #8adae3;
 }

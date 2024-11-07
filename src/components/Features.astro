@@ -33,12 +33,12 @@ const items = [
 
 <div
   id='features'
-  class='flex flex-col items-center justify-center gap-20 self-stretch px-7 py-[86px]'
+  class='flex flex-col items-center justify-center gap-20 self-stretch px-7 py-[86px] 2xl:grid 2xl:grid-cols-2 2xl:grid-rows-2 2xl:gap-x-[150px] 2xl:gap-y-20 2xl:px-[200px] 2xl:py-32'
 >
   {
     items.map((item) => (
-      <div class='flex flex-col items-center justify-center gap-6 self-stretch'>
-        <div class='flex h-20 w-20'>
+      <div class='flex flex-col items-center justify-center gap-6 self-stretch 2xl:gap-4'>
+        <div class='flex h-20 w-20 2xl:h-[104px] 2xl:w-[104px]'>
           <img src={item.icon} alt={`Icon ${item.alt}`} class='w-full object-contain' />
         </div>
         <div class='flex flex-col items-center justify-center gap-2 self-stretch'>

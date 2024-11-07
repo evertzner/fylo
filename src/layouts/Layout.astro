@@ -26,9 +26,10 @@ const { title } = Astro.props;
   <body class='relative flex flex-col items-center justify-center'>
     <slot />
     <div class='absolute bottom-0 top-[300px] -z-10 flex w-full flex-col'>
-      <img src='/bg-curvy-mobile.svg' alt='Mobile background' class='w-full' />
+      <img src='/bg-curvy-mobile.svg' alt='Mobile background' class='flex w-full 2xl:hidden' />
+      <img src='/bg-curvy-desktop.svg' alt='Desktop background' class='hidden w-full 2xl:flex' />
       <div class='h-full bg-mirage-800'></div>
-      <div class='h-[974px] min-h-[974px] bg-mirage-950'></div>
+      <div class='h-[120vh] bg-mirage-950 2xl:h-[50vh]'></div>
     </div>
   </body>
 </html>

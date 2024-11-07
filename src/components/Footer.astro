@@ -39,36 +39,42 @@ const socials = [
 ];
 ---
 
-<footer class='flex flex-col items-start gap-7 px-7 py-4'>
+<footer class='flex flex-col items-start gap-7 px-7 py-4 2xl:gap-[52px]'>
   <img src='/logo.svg' alt='Logo footer' loading='lazy' class='w-[108px]' />
-  <div class='grid grid-cols-[max-content_1fr] items-start gap-4 self-stretch py-2'>
-    {
-      contactItems.map((item) => (
-        <div class='contents'>
-          <img src={item.icon} alt={`Icon ${item.alt}`} loading='lazy' />
-          <div class='leading-normal'>{item.description}</div>
-        </div>
-      ))
-    }
-  </div>
-  <div class='flex flex-col items-start gap-12 self-stretch py-6'>
-    {
-      links.map((linkGroup) => (
-        <div class='flex flex-col items-start gap-4 self-stretch'>
-          {linkGroup.map((link) => (
-            <a href='#'>{link}</a>
-          ))}
-        </div>
-      ))
-    }
-  </div>
-  <div class='flex items-center justify-center gap-3 self-stretch py-1'>
-    {
-      socials.map((social) => (
-        <div class='h-7 w-7 rounded-full border border-white p-1'>
-          <img src={social.icon} alt={social.alt} loading='lazy' />
-        </div>
-      ))
-    }
+  <div class='contents 2xl:flex 2xl:gap-[112px]'>
+    <div
+      class='2x:flex-1 grid grid-cols-[max-content_1fr] items-start gap-4 self-stretch py-2 2xl:grid 2xl:grid-cols-[1fr_max-content] 2xl:grid-rows-2 2xl:items-center 2xl:gap-x-20 2xl:gap-y-4 2xl:self-start 2xl:py-2'
+    >
+      {
+        contactItems.map((item) => (
+          <div class='contents 2xl:grid 2xl:grid-cols-[max-content_1fr] 2xl:gap-x-6 2xl:first:row-start-1 2xl:first:row-end-3 2xl:last:self-start 2xl:even:self-end'>
+            <img src={item.icon} alt={`Icon ${item.alt}`} loading='lazy' class='2xl:mt-1' />
+            <div class='leading-normal'>{item.description}</div>
+          </div>
+        ))
+      }
+    </div>
+    <div
+      class='flex flex-col items-start gap-12 self-stretch py-6 2xl:grid 2xl:grid-cols-[max-content_max-content] 2xl:gap-20 2xl:p-0'
+    >
+      {
+        links.map((linkGroup) => (
+          <div class='flex flex-col items-start gap-4 self-stretch'>
+            {linkGroup.map((link) => (
+              <a href='#'>{link}</a>
+            ))}
+          </div>
+        ))
+      }
+    </div>
+    <div class='flex items-center justify-center gap-3 self-stretch py-1 2xl:self-start'>
+      {
+        socials.map((social) => (
+          <div class='h-7 w-7 rounded-full border border-white p-1 2xl:h-8 2xl:w-8 2xl:p-1.5'>
+            <img src={social.icon} alt={social.alt} loading='lazy' />
+          </div>
+        ))
+      }
+    </div>
   </div>
 </footer>
